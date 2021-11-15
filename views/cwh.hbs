@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang=en>
+    {{>header}}
+
+    <div class="row text-center">
+        {{#each plans}}
+            <div class="col-md-3 plan">
+                        <h1 class="bi bi-server">
+                            <br>{{plan_name}}</h1>
+            {{plan_description}}
+            <h2>{{plan_cost}} / Month</h2>
+            {{#performance plan_performance}}
+            {{/performance}}
+            <li><strong>{{plan_websites}}</strong> Websites</li>
+            <li><strong>{{site_traffic}}</strong> Space And Traffic</li>
+            <li><strong>{{email_type}}</strong> Email</li>
+            <li>Standard Hosting Features</li>
+            <li>Free Site Migration</li>
+            {{#if plan_domain}}
+            <li><strong>Free</strong> Domain</li>
+            {{/if}}
+            <li>Wordpress Optimized</li>
+            {{#if features_type}}
+            <li><strong>{{features_type}}</strong> Features</li>
+            {{/if}}
+            
+            {{#if email_contacts}}
+            <li>Email Marketing <strong>({{email_contacts}}</strong> Contacts)</li>
+            {{/if}}
+            {{#if plan_ssl}}
+            <li>SSL Certificate</li>
+            {{/if}}
+            {{#if ip_type}}
+            <li>Dedicated IP</li>
+            {{/if}}
+            <a href="" class="btn btn-primary btn-lg">Add to Cart</a>
+        </div>
+        {{/each}}
+        
+    </div>
+
+</body>
+{{>footer}}
+</html>

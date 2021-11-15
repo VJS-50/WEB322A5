@@ -1,0 +1,109 @@
+header {
+    margin: 5em;
+}
+#hero {
+    background: url(https://whc.ca/wp-content/themes/whc/images/weareopen.jpg); 
+    padding: 10% 2%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+#hero .row {
+    color: white;
+    text-align: center;
+}
+#hero .col-md-5{
+    margin-left: 8%;
+}
+body {
+    margin: 4%;
+}
+nav a{
+    padding-left: 1%;
+    font-size: 18px;
+}
+#content{
+    padding: 5%;
+}
+#review{
+    background: url('5616.jpg');
+    padding: 5%;
+    color:black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#reviewGrid{
+    padding-top: 15%;
+    margin-left: 5%;
+}
+.reviewText{
+    background-color:rgba(0,0,0,0.8);
+    color: white;
+}
+#footerTop{
+    padding: 4%;
+    background-color:rgb(9, 127, 250);
+    color: white;
+}
+#footerTop a{
+    color: white;
+}
+.footerBottom {
+    padding: 4%;
+    background-color: rgb(51, 53, 79);
+    color: white;
+}
+.footerBottom a{
+    color: white;
+}
+footer{
+    margin-top: 10%;
+}
+
+.plan {
+    background: rgba(255,255,255,0.6);
+    padding: 40px 36px;
+    margin: 15px 10px;
+    animation: fadeinlate 2.5s;
+    max-width: 33%;
+}
+.plan .btn{
+    margin: 1%;
+    padding: 1%;
+}
+.plan:hover{
+    box-shadow: 0 0 30px rgb(0 0 0 / 20%);
+}
+
+.loginForm {
+    background-color: white;
+    padding: 4%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 10%;
+}
+
+.formdiv {
+    display: block; 
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.registerForm {
+    background-color: white;
+    padding: 5em;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 10%;
+}
+
+.colorBackground {
+    background: blue linear-gradient(
+        45deg,red 0,blue 100%);
+        background-size: cover;
+        padding-bottom: 20%;
+}

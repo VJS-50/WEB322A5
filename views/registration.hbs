@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang=en>
+    <meta charset="utf-8" />
+    <meta name="description" content="WEB322 Assignment 2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" 
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" 
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="static/style.css">
+    
+    
+
+    <body class="colorBackground">
+        
+        <div class="formdiv">
+        <div class="registerForm">
+            
+                <form action='/register_post' method="POST" enctype="application/x-www-form-urlencoded">
+                    <img src="https://clients.whc.ca/templates/hwc-six/img/picto-whc.svg">
+                    <h1>Create An Account</h1>  
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputName" name="fname" placeholder="First Name" required>
+                        <div style="color: red;">{{error.nameErr}}</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputSurname" name="surname" placeholder="Last Name" required>
+                        <div style="color: red;">{{error.lnameErr}}</div>
+                        </div>
+                                  
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required>
+                        <div style="color: red;">{{error.emailErr}}</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                        <input type="tel" class="form-control" id="inputPhoneNumber" name="phone_num" placeholder="Phone Number" required>
+                        <div style="color: red;">{{error.phoneErr}}</div>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" required>
+                        <div style="color: red;">{{error.passErr}}</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                        <input type="password" class="form-control" id="inputConfirm" name="password_confirm" placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputAddress" name="address1" placeholder="Street Address" required>
+                        <div style="color: red;">{{error.addressErr}}</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputAddress2" name="address2" placeholder="Street Address 2">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                        <input type="text" class="form-control" id="inputCity" name="city" placeholder="City" required>
+                        <div style="color: red;">{{error.cityErr}}</div>
+                        </div>
+                        <div class="form-group col-md-4">
+                        <select id="inputState" name="state" class="form-control" required>
+                            <option selected>Province</option>
+                            <option>Ontario</option>
+                            <option>Quebec</option>
+                            <option>Nova Scotia</option>
+                            <option>New Brunswick</option>
+                            <option>Manitoba</option>
+                            <option>British Columbia</option>
+                            <option>Prince Edward Island</option>
+                            <option>Saskatchewan</option>
+                            <option>Alberta</option>
+                            <option>Newfoundland & Labrador</option>
+                        </select>
+                        <div style="color: red;">{{error.stateErr}}</div>
+                        </div>
+                        <div class="form-group col-md-3">
+                        <input type="text" class="form-control" id="inputZip" name="zip" placeholder="Postal Code" required>
+                        <div style="color: red;">{{error.zipErr}}</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-danger" style="margin-top: 10%;">
+                    <b>By clicking on Create Account, you agree to the Terms of Service and Privacy Policy.<br>
+                         You agree that WHC will automatically attempt to renew your services prior to their <br>
+                         next due date unless you request otherwise from your Client Area</b>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </form>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang=en>
+    <meta charset="utf-8" />
+    <meta name="description" content="WEB322 Assignment 2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" 
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" 
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="static/style.css">
+    
+    <body class="colorBackground">
+        <div class="formdiv">
+        <div class="loginForm">
+            
+            <form action='/addPlan_post' method="POST" enctype="application/x-www-form-urlencoded">
+                <img src="https://clients.whc.ca/templates/hwc-six/img/picto-whc.svg">
+                <h3>Add New Plan</h3>
+                <!--  Plan Structure:
+                          planID: count + 1,
+                                plan_name: np.name,
+                                plan_description: np.desc,
+                                plan_cost: np.price,
+                                plan_performance: np.perf,
+                                plan_websites: np.sites,
+                                site_traffic: np.traffic,
+                                email_type: np.email,
+                                site_migration: np.migration,
+                                plan_domain: np.domain,
+                                features_type: np.features,
+                                email_contacts: np.contacts,
+                                plan_ssl: np.ssl,
+                                ip_type: np.ip,
+                                icon: np.photo,
+                                most_popular: 0
+                -->
+                <div class="input-group form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Plan Name" required>
+                </div>
+                <div class="input-group form-group">
+                    <textarea rows="4" cols="25" name="desc" placeholder="Enter A Description"></textarea>
+                </div>
+                <div class="input-group form-group">
+                    <input type="number" class="form-control" name="price" placeholder="Price/Month" min="0" step=".01" required>
+                </div>
+                <div class="input-group form-group">
+                    <input type="number" class="form-control" name="perf" placeholder="Performance Rating" min="1" required>
+                </div>
+                <div class="input-group form-group">
+                    <label for="sites">Websites</label>
+                    <select id="sites" name="sites" class="form-control" placeholder="Websites" required>
+                        <option>Single</option>
+                        <option>Two</option>
+                        <option>Unlimited</option>
+                </select>
+                </div>
+                
+                <div class="input-group form-group">
+                    <label for="email">Email Type</label>
+                    <select id="email" name="email" class="form-control" placeholder="Select Plan ID" required>
+                        <option>Starter</option>
+                        <option>Pro</option>
+                        <option>Supreme</option>
+                </select>
+                    <input type="number" class="form-control" name="contacts" placeholder="Email Contacts" min="10" required>
+                </div>
+                
+
+                <div class="input-group form-group">
+                    <label for="photo">Plan Icon</label>
+                <input id="photo" type="file" name="photo" accept="image/x-png,image/gif,image/jpeg"/><br />
+                </div>
+                <div class="input-group form-group">
+                    <h4>Extra Features:</h4>
+                    <input type="checkbox" name="migrate" value="Free"> Free Site Migration
+                    <input type="checkbox" name="domain" value="Free"> Free Domain
+                    <input type="checkbox" name="ip" value="Dedicated"> Dedicated IP Address
+                    <input type="checkbox" name="ssl" value="SSL Certificate"> SSL Certificate
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit New Plan" class="btn btn-primary btn-lg" name="btn_login">
+                </div>
+                
+            </form>
+        </div>
+        </div>
+    </body>
+    
+    
+</html>

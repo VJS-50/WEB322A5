@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang=en>
+
+    <body>
+            <!-- Header & Navigation -->
+                {{>header}}
+        <section id="welcomeMessage">
+            <div>
+                {{#if data1}}
+              <h1>Welcome {{data1.name}} {{data1.lastname}}!  ({{data1.email}})</h1>
+              {{/if}}
+            </div>
+        </section>
+        <section id="hero">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2>Choose superior<br>web hosting</h2>
+                        <a href="/plans" class="btn btn btn-info btn-danger">Get Web Hosting</a>
+                        <span>Starting at only <strong>$3.89/mo</strong>.</span>
+                    </div>
+                    <div class=" offset-md-3 col-md-5">
+                        <h2>Find your perfect<br>.CA domain name</h2>
+                        <a href="/domain" class="btn btn-info btn-danger">Search Domains</a>
+                        <span>Starting at only <strong>$9.99/year</strong></span>
+                    </div>
+            </div>
+        </section>
+         <div class="row text-center" >
+            <h1>Most Popular</h1>
+            <div class="col-md-offset-4">{{>mp_plan plan=mostPopular}}</div>   
+         </div>
+        <section id="content">
+            <!-- Content -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2 class="bi bi-server"> Web Hosting</h2>
+                        <h4>Get fast and unlimited web hosting for your site</h4>
+                        <a href="/plans" class="btn btn-primary btn-block">Get Hosting</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="bi bi-cloud-arrow-up-fill"> Cloud Servers</h2>
+                        <h4>Take full control with our fastest virtual servers</h4>
+                        <a href="/cloud" class="btn btn-primary btn-block">Compare Clouds</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="bi bi-hdd-network-fill"> Dedicated Servers</h2>
+                        <h4>Boost your business with dedicated hardware</h4>
+                        <a href="/dedicated" class="btn btn-primary btn-block">View Servers</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="bi bi-file-word"> WordPress</h2>
+                        <h4>Manage your WordPress websites easily</h4>
+                        <a href="/wordpress" class="btn btn-primary btn-block">Get WordPress</a>
+                    </div>
+                </div>
+               
+                
+                <br>
+                <div id="review">
+                    <div id="reviewGrid" class="row">
+                    <h2>Reviews</h2>
+                        <div class="col-lg-5 reviewText">
+                            <div><strong>Jeremy Elbertson</strong> <a href="https://theuselessweb.com/"> theuselessweb.com</a></div>
+                            <div><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <p>I recently moved my web hosting to Web Hosting Canada and I would happily give them 10 Stars. Apart from providing me with a solid technical environment, they have provided me with absolutely First Class, friendly, informative and fast support.</p>
+                            
+                        </div>
+                        <div class="col-lg-5 reviewText">
+                            <!-- Who named this guy? -->
+                            <div><strong>Mihaly Dumitru Margareta Corneliu Leopold Blanca Karol Aeon Ignatius Raphael Maria Niketas A. Shilage</strong> <a href="https://isitchristmas.com/"> isitchristmas.com</a></div>
+                            <div><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <p>I have nothing but AMAZING experiences with the WHC live chat support. I started my website making journey with WHC and it has always been so smooth to get assistance… I will continue to recommend you guys to my friends and clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+            {{>footer}}
+</html>

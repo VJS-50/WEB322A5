@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang=en>
+    {{>header}}
+    <script src="index.js"></script>
+    <div class="row text-center">
+        {{#each plans}}
+            <div class="col-md-3 plan">
+            <h1 class="bi bi-server"><br>{{plan_name}} </h1>
+            <h3>PlanID: {{planID}}</h3>
+            {{plan_description}}
+            <h2>{{plan_cost}} / Month</h2>
+            {{#performance plan_performance}}
+            {{/performance}}
+            <li>{{plan_websites}} Websites</li>
+            <li>{{site_traffic}} Space And Traffic</li>
+            <li>{{email_type}} Email</li>
+            <li>Standard Hosting Features</li>
+            <li>Free Site Migration</li>
+            {{#if plan_domain}}
+            <li>Free Domain</li>
+            {{/if}}
+            <li>Wordpress Optimized</li>
+            {{#if features_type}}
+            <li>{{features_type}} Features</li>
+            {{/if}}
+            
+            {{#if email_contacts}}
+            <li>Email Marketing ({{email_contacts}} Contacts)</li>
+            {{/if}}
+            {{#if plan_ssl}}
+            <li>SSL Certificate</li>
+            {{/if}}
+            {{#if ip_type}}
+            <li>Dedicated IP</li>
+            {{/if}}
+        </div>
+        {{/each}}
+        
+        <form action='/setPlan_post' method="POST" enctype="application/x-www-form-urlencoded">
+             <div class="form-group col-md-offset-3 col-md-4">
+                 <label>Select A Plan ID</label>
+                <select id="inputID" name="nmp_plan_id" class="form-control" placeholder="Select Plan ID" required>
+                {{#each plans}}
+                    <option>{{planID}}</option>
+                {{/each}}
+                </select>
+             </div>
+             <div class="form-group col-md-2">
+                    <input type="submit" value="Set as Most Popular" class="btn btn-primary btn-lg" name="btn_nmp">
+                </div>
+        </form>
+
+    </div>
+
+</body>
+{{>footer}}
+</html>
